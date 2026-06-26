@@ -43,7 +43,7 @@ public class OrcamentoBean implements Serializable {
             List<ArestaRequest> arestas = new ArrayList<>();
             ArestaRequest aresta = new ArestaRequest();
             aresta.setComprimento(comprimentoParede);
-            aresta.setLargura(larguraViga);
+            aresta.setEspessura(larguraViga);
             arestas.add(aresta);
 
             ConcretoRequest concretoRequest = new ConcretoRequest();
