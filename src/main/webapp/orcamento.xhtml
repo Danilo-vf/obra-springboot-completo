@@ -34,6 +34,9 @@
             <h:outputLabel value="Comprimento do Tijolo (m):" />
             <h:inputText value="#{orcamentoBean.comprimentoTijolo}" />
 
+            <h:outputLabel value="Percentual de Perda (%):" />
+            <h:inputText value="#{orcamentoBean.percentualPerda}" />
+
         </h:panelGrid>
 
         <h:commandButton value="Calcular Orçamento" action="#{orcamentoBean.calcular}" />
