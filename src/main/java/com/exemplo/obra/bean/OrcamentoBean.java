@@ -89,6 +89,8 @@ public class OrcamentoBean implements Serializable {
     public void setAlturaTijolo(Double alturaTijolo) { this.alturaTijolo = alturaTijolo; }
     public Double getComprimentoTijolo() { return comprimentoTijolo; }
     public void setComprimentoTijolo(Double comprimentoTijolo) { this.comprimentoTijolo = comprimentoTijolo; }
+    public Double getPercentualPerda() { return percentualPerda; }
+    public void setPercentualPerda(Double percentualPerda) { this.percentualPerda = percentualPerda; }
     public Double getVolumeConcreto() { return volumeConcreto; }
     public Integer getQuantidadeTijolos() { return quantidadeTijolos; }
     public String getNumeroOrcamento() { return numeroOrcamento; }
