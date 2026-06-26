@@ -48,7 +48,7 @@ public class OrcamentoBean implements Serializable {
 
             ConcretoRequest concretoRequest = new ConcretoRequest();
             concretoRequest.setArestas(arestas);
-            concretoRequest.setAltura(alturaViga);
+            concretoRequest.setAlturaViga(alturaViga);
 
             TijoloRequest tijoloRequest = new TijoloRequest();
             tijoloRequest.setArestas(arestas);
