@@ -31,6 +31,7 @@ public class OrcamentoBean implements Serializable {
     private Double larguraTijolo = 0.14;
     private Double alturaTijolo = 0.09;
     private Double comprimentoTijolo = 0.19;
+    private Double percentualPerda = 10.0;
 
     private Double volumeConcreto;
     private Integer quantidadeTijolos;
@@ -54,6 +55,7 @@ public class OrcamentoBean implements Serializable {
             tijoloRequest.setAltura(alturaParede);
             tijoloRequest.setLargura(larguraTijolo);
             tijoloRequest.setComprimento(comprimentoTijolo);
+            tijoloRequest.setPercentualPerda(percentualPerda);
 
             volumeConcreto = materialService.calcularVolumeConcreto(concretoRequest).getVolumeTotal().doubleValue();
             quantidadeTijolos = materialService.calcularQuantidadeTijolos(tijoloRequest).getQuantidadeTijolosComPerda();
