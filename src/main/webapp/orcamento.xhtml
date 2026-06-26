@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Calculadora de Materiais - Obra Residencial</title>
+</h:head>
+
+<h:body>
+    <h1>Solicitação de Orçamento</h1>
+
+    <h:form>
+        <h:panelGrid columns="2">
+
+            <h:outputLabel value="Nome do Cliente:" />
+            <h:inputText value="#{orcamentoBean.nomeCliente}" required="true" />
+
+            <h:outputLabel value="Comprimento da Parede (m):" />
+            <h:inputText value="#{orcamentoBean.comprimentoParede}" />
+
+            <h:outputLabel value="Altura da Parede (m):" />
+            <h:inputText value="#{orcamentoBean.alturaParede}" />
+
+            <h:outputLabel value="Altura da Viga (m):" />
+            <h:inputText value="#{orcamentoBean.alturaViga}" />
+
+            <h:outputLabel value="Largura da Viga (m):" />
+            <h:inputText value="#{orcamentoBean.larguraViga}" />
+
+            <h:outputLabel value="Largura do Tijolo (m):" />
+            <h:inputText value="#{orcamentoBean.larguraTijolo}" />
+
+            <h:outputLabel value="Comprimento do Tijolo (m):" />
+            <h:inputText value="#{orcamentoBean.comprimentoTijolo}" />
+
+        </h:panelGrid>
+
+        <h:commandButton value="Calcular Orçamento" action="#{orcamentoBean.calcular}" />
+
+        <h:panelGroup rendered="#{not empty orcamentoBean.mensagem}">
+            <h2>Resultado</h2>
+            <p><b>Mensagem:</b> #{orcamentoBean.mensagem}</p>
+            <p><b>Número do Orçamento:</b> #{orcamentoBean.numeroOrcamento}</p>
+            <p><b>Volume de Concreto:</b> #{orcamentoBean.volumeConcreto} m³</p>
+            <p><b>Quantidade de Tijolos:</b> #{orcamentoBean.quantidadeTijolos} un</p>
+        </h:panelGroup>
+
+    </h:form>
+</h:body>
+</html>
