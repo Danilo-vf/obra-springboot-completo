@@ -56,7 +56,7 @@ public class OrcamentoBean implements Serializable {
             tijoloRequest.setComprimento(comprimentoTijolo);
 
             volumeConcreto = materialService.calcularVolumeConcreto(concretoRequest).getVolumeTotal().doubleValue();
-            quantidadeTijolos = materialService.calcularQuantidadeTijolos(tijoloRequest).getQtdComPerda();
+            quantidadeTijolos = materialService.calcularQuantidadeTijolos(tijoloRequest).getQuantidadeTijolosComPerda();
 
             Orcamento orcamento = new Orcamento();
             orcamento.setNomeCliente(nomeCliente);
